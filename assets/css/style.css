@@ -1,0 +1,322 @@
+/*
+======== :: INDEX OF CSS :: *******
+:: 1.0 WEB FONTS 
+:: 2.0 GLOBAL Variable Define CSS
+:: 3.0 COMMON CSS 
+:: 4.0 HEADER CSS 
+:: 5.0 HOME CSS
+:: 6.0 SERVICES CSS 
+:: 7.0 Promo CSS
+:: 8.0 Features CSS
+:: 9.0 app-screenshots CSS
+:: 10.0 pricing CSS
+:: 11.0 Contact CSS
+:: 12.0 Footer CSS
+:: 13.0 Scroll Top CSS
+    ============================================= */
+
+/*  =============================================
+:: 1.0 WEB FONTS
+    ============================================= */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+/*  ================================================
+    :: 2.0 GLOBAL Variable Define CSS
+        ================================================ */
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  /* Background Color */
+  --bg-white: #fff;
+  --bg-black: #2c2c2c;
+  --bg-light-pink: #ff007a;
+  --bg-light-gray: #f6f9fe;
+  --bg-gradient: linear-gradient(to bottom, #00e0fe , #1107fe 100%);
+  --bg-card-shodow: 0 0.188rem 1.25rem 0px rgba(0, 0, 0, 0.06);
+  --bg-card-shodow: 0 2rem 5rem rgb(0, 0, 0, 0.06);
+  --bg-light-gray-1: #eee;
+  --bg-blue: #1107fe;
+
+  /* Text Color */
+  --primary-font: "Roboto", sans-serif;
+  --text-white: #fff;
+  --text-black: #2c2c2c;
+  --text-light-black: #444;
+  --text-light-pink: #ff007a;
+  --text-light-gray: #7e8085;
+}
+
+/*  ================================================
+    :: 3.0 COMMON CSS
+        ================================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--primary-font);
+  line-height: 1.8rem;
+  background: var(--bg-white);
+  color: var(--text-black);
+  overflow-x: hidden;
+}
+
+/*
+=====================================
+ ปรับแต่ง สกอร์บาร์ขึ้นลงด้านข้าง */
+/* Custom Scrollbar
+=====================================
+ */
+ ::-webkit-scrollbar {
+  /* ความกว้าง csrollbar */
+  width: 0.625rem;
+}
+::-webkit-scrollbar-track{
+  /* สีพื้นหลังแนว scrollbar */
+  background: var(--white-color);
+}
+::-webkit-scrollbar-thumb {
+  /* สีพื้นหลังตัว scrollbar*/
+  background: var(--bg-blue);
+ 
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900 !important;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.4s ease;
+  font-weight: 700;
+  color: #20212c;
+}
+img {
+  width: 100%;
+}
+
+section {
+  padding: 80px 0;
+  z-index: 2;
+  position: relative;
+}
+
+.bg-cover {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* fix background */
+  background-attachment: fixed;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 224, 254, 0.7), rgba(17, 7, 254, 0.7));
+  z-index: -1;
+}
+
+.btn {
+  border: none !important;
+  transition: all 0.4s ease;
+}
+.btn:hover {
+  color: var(--text-white);
+  transform: translateY(-5px);
+}
+.btn-main {
+  border-radius: 100px;
+  font-weight: 700;
+  color: var(--bg-white);
+  padding: 14px 22px;
+  background: linear-gradient(to right, #00e0fe, #1107fe);
+}
+
+/*  ================================================
+    :: 4.0 HEADER CSS Navbar
+================================================ */
+.navbar {
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  background: -webkit-linear-gradient(#00e0fe, #1107fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* color: var(--text-light-pink) !important; */
+}
+
+/*  ================================================
+:: 5.0 HOME Section CSS
+================================================ */
+#home {
+  background-image: url(../images/header.jpg);
+}
+#home.hero-section {
+  min-height: 100vh;
+  display: flex;
+  /* แนวนอน */
+  justify-content: center;
+  /* แนวตั้ง */
+  align-items: center;
+}
+/* #home  */
+
+/*  ================================================
+:: 6.0 Services CSS
+    ================================================ */
+.section-intro {
+  margin-bottom: 40px;
+}
+.section-intro .divider {
+  height: 4px;
+  width: 70px;
+  margin: 16px auto;
+  background: linear-gradient(to right, #00e0fe, #1107fe);
+}
+.service .service-img {
+  position: relative;
+}
+.service .service-img .icon {
+  position: absolute;
+  bottom: -45px;
+  left: 50%;
+  /*ย้ายใน แนวนอน */
+  transform: translateX(-50%);
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(to right, #00e0fe, #1107fe);
+  color: var(--text-white);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.service .service-img .icon i {
+  font-size: 36px;
+}
+
+/*  ================================================
+:: 7.0 About CSS
+    ================================================ */
+#about {
+  background-image: url(../images/about.jpg);
+}
+.video-btn {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(to right, #00e0fe, #1107fe);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-white);
+  border-radius: 100px;
+}
+.video-btn i {
+  font-size: 16px;
+}
+/*  ================================================
+:: 8.0 Features CSS
+    ================================================ */
+.feature i {
+  /* gradien Color */
+  background: -webkit-linear-gradient(#00e0fe, #1107fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* color: var(--text-light-pink) !important; */
+  font-size: 54px;
+}
+
+/*  ================================================
+:: 9.0 Counter CSS
+    ================================================ */
+.counter-section {
+  background-image: url(../images/counter.jpg);
+}
+/*  ================================================
+:: 10.0 Reviews CSS
+    ================================================ */
+.review {
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
+}
+.review .person {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  padding-bottom: 18px;
+}
+.img-circle {
+  height: 150px;
+  width: 150px;
+  border-radius: 150px;
+  border: 3px solid var(--bg-white);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  object-fit: cover;
+  background: var(--bg-white);
+}
+.review .person img {
+  /* width: 75px;
+  height: 75px;
+  border-radius: 100%; */
+}
+.review .stars {
+  color: gold;
+}
+/*  ================================================
+:: 11.0 Contact CSS
+    ================================================ */
+#contact {
+  background-image: url(../images/about.jpg);
+}
+
+form .form-control {
+  border-radius: 0;
+  background: transparent;
+  color: var(--text-white);
+  border-color: rgb(255, 255, 255, 0.6);
+}
+
+form .form-control:focus {
+  color: var(--text-white);
+  background: transparent;
+  border-color: var(--bg-white);
+}
+
+form input.form-control {
+  height: 54px;
+}
+
+#contact form .form-control::placeholder {
+  color: var(--text-white);
+}
+/*  ================================================
+:: 12.0 Footer CSS
+    ================================================ */
+footer {
+  background: linear-gradient(to right, #00e0fe, #1107fe);
+  color: var(--text-white);
+}
+footer a {
+  color: var(--text-white);
+  margin: 0 5px;
+}
+footer a i:hover {
+  transform: scale(2) translateY(-4px);
+  color: var(--text-white);
+}
+/*  ================================================
+:: 13.0 Scroll Top CSS
+    ================================================ */
